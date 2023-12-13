@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+	<meta charset="utf-8" />
+	<title>Trip Planner</title>
+</head>
+
+<body>
+    <h1>Welcome to the Trip Planner!</h1>
+    <form action="/addDestination" method="get" class="redirect">
+        <input type="submit" value="Add Destination" />
+    </form>
+    <form action="/removeDestination" method="get" class="redirect">
+        <input type="submit" value="Remove Destination" />
+    </form>
+    <form action="/getCityDetails" method="get" class="redirect">
+        <input type="submit" value="Discover a City" />
+    </form>
+    <form action="/reviewItinerary" method="get" class="redirect">
+        <input type="submit" value="Review Itinerary" />
+    </form>
+    <form action="/clearItinerary" method="post" class="redirect">
+        <input type="submit" value="Clear Itinerary" />
+    </form>
+</body>
+
+</html>

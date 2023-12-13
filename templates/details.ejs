@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+	<meta charset="utf-8" />
+	<title>Trip Planner</title>
+</head>
+
+<body>
+    <h1>City Details for: <%- city %></h1>
+    <div>
+        <%- result %>
+    </div>
+    <hr>
+    <b>Task Completed at <%- dateAndTime %></b>
+    <hr>
+    <form action="/" method="get" class="redirect">
+        <input type="submit" value="Home" />
+    </form>
+</body>
+
+</html>

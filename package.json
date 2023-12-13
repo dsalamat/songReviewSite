@@ -1,0 +1,19 @@
+{
+  "name": "travelitinerary",
+  "version": "1.0.0",
+  "description": "A travel itinerary website where you can plan out your trip and look up information about the city or country they're interested in.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo hello"
+  },
+  "author": "Daniel Salamatovs & Samuel Schreier",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "mongodb": "^6.3.0"
+  }
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+	<meta charset="utf-8" />
+	<title>Trip Planner</title>
+</head>
+
+<body>
+    <h1>Destination Not Found!</h1>
+    <p>No entries were found in your itinerary with the following parameters:</p>
+    <b>City: </b><%- city %><br>
+    <b>Region: </b><%- region %><br>
+    <b>Country: </b><%- country %><br>
+    <b>Date: </b><%- date %><br><br>
+    <hr>
+    <b>Task Completed at <%- dateAndTime %></b>
+    <hr>
+    <form action="/removeDestination" method="get" class="redirect">
+        <input type="submit" value="Remove Destination" />
+    </form>
+    <form action="/reviewItinerary" method="get" class="redirect">
+        <input type="submit" value="Review Itinerary" />
+    </form>
+    <form action="/" method="get" class="redirect">
+        <input type="submit" value="Home" />
+    </form>
+</body>
+
+</html>

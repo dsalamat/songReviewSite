@@ -1,0 +1,29 @@
+/* Color scheme: #1A1A1B background, #DDE6ED text, #145369 accent */
+/* Also usable: #2596be */
+
+html {
+    background-color: #1A1A1B;
+    color: #DDE6ED;
+}
+input {
+    background-color: #1A1A1B;
+    color: #DDE6ED;
+}
+input[type="submit"], input[type="reset"] {
+    border: 1px solid #DDE6ED;
+    padding: 5px;
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #145369;
+}
+textarea {
+    background-color: #1A1A1B;
+    color: #DDE6ED;
+}
+.redirect {
+    float: left;
+    padding-right: 5px;
+}
+table, th, td {
+    border: 1px solid #DDE6ED;
+}

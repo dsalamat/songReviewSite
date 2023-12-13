@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+	<meta charset="utf-8" />
+	<title>Trip Planner</title>
+</head>
+
+<body>
+    <h1>Destination Added!</h1>
+    <b>City: </b> <%- city %><br>
+    <b>Region: </b> <%- region %><br>
+    <b>Country: </b><%- country %><br>
+    <b>Date: </b><%- date %><br>
+    <b>Notes: </b><br>
+    <%- notes %><br><br>
+    <hr>
+    <b>Task Completed at <%- dateAndTime %></b>
+    <hr>
+    <form action="/addDestination" method="get" class="redirect">
+        <input type="submit" value="Add Destination" />
+    </form>
+    <form action="/reviewItinerary" method="get" class="redirect">
+        <input type="submit" value="Review Itinerary" />
+    </form>
+    <form action="/" method="get" class="redirect">
+        <input type="submit" value="Home" />
+    </form>
+</body>
+
+</html>
