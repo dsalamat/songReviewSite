@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+	<meta charset="utf-8" />
+	<title>Trip Planner</title>
+</head>
+
+<body>
+    <h1>Add a Destination</h1>
+    <form action="/addDestination" method="post">
+        <b>City: <input type="text" name="city" value="<%= city %>" required> Region: <input type="text" name="region" value="<%= region %>" required></b><br><br>
+        <b>Country: <input type="text" name="country" value="<%= country %>" required> Date: <input type="date" name="date" required></b><br><br>
+        <b>Notes: </b><br>
+        <textarea name="notes" rows="6" cols="40"></textarea>
+        <br><br>
+        <input type="submit" value="Submit Destination">
+        <input type="reset" value="Clear">
+    </form>
+    <hr>
+    <form action="/getCityDetails" method="get" class="redirect">
+        <input type="submit" value="Discover a City" />
+    </form>
+    <form action="/" method="get" class="redirect">
+        <input type="submit" value="Home" />
+    </form>
+</body>
+
+</html>
