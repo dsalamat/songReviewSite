@@ -13,8 +13,8 @@ To use this app you need to have Node.js and Node Package Manager (npm) installe
 
 1. **Clone** the repository
 2. Run `npm install` in the directory to download all necessary dependencies
-3. Run `node app.js` to run the app
+3. Run `node app.js` to start the app
 4. Access the site at `http:localhost:4000`
 
-To stop the app, type stop in the command line terminal or use *CTRL+C*
+To stop the app, run `stop` in the command line terminal or use *CTRL+C*
 
