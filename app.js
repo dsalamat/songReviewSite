@@ -60,7 +60,7 @@ async function main() {
                 region: request.body.region,
                 date: request.body.date,
                 notes: request.body.notes,
-                dateAndTime: date.toLocaleString()
+                dateAndTime: date.toLocaleString("en-US", {timeZone: "America/New_York"}) + " - EST (New York)"
             };
             (async function() {await insertDestination(client, databaseAndCollection, variables)})();
             response.render("submission", variables);
@@ -94,7 +94,7 @@ async function main() {
                 const variables = {
                     city: request.body.city,
                     result: output,
-                    dateAndTime: date.toLocaleString()
+                    dateAndTime: date.toLocaleString("en-US", {timeZone: "America/New_York"}) + " - EST (New York)"
                 };
                 response.render("details", variables);
             });
@@ -117,7 +117,7 @@ async function main() {
                 const date = new Date();
                 const variables = {
                     itinerary: output,
-                    dateAndTime: date.toLocaleString()
+                    dateAndTime: date.toLocaleString("en-US", {timeZone: "America/New_York"}) + " - EST (New York)"
                 };
                 response.render("itinerary", variables);
             });
@@ -141,7 +141,7 @@ async function main() {
                     region: request.body.region,
                     date: request.body.date,
                     numRemoved: numRemoved,
-                    dateAndTime: date
+                    dateAndTime: date.toLocaleString("en-US", {timeZone: "America/New_York"}) + " - EST (New York)"
                 };
                 if (numRemoved > 0) {
                     response.render("removed", variables);
@@ -159,7 +159,7 @@ async function main() {
                 const date = new Date();
                 const variables = {
                     numRemoved: numRemoved,
-                    dateAndTime: date
+                    dateAndTime: date.toLocaleString("en-US", {timeZone: "America/New_York"}) + " - EST (New York)"
                 };
                 response.render("cleared", variables);
             });
