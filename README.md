@@ -1,5 +1,5 @@
 # Travel Itinerary
-By Daniel Salamatovs and Samuel Schreier
+By Daniel Salamatovs (dsalamat) and Samuel Schreier (sschreie)
 
 ## Overview
 
