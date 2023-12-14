@@ -18,16 +18,13 @@ app.use(express.static(__dirname + "/static"));
 async function main() {
 
     // Check for correct number of arguments
-    if (process.argv.length != 3) {
-        console.log(`Usage: node app.js PORT_NUMBER`);
-        process.exit(1);
-    } else if (Number.isNaN(Number(process.argv[2]))) {
-        console.log(`Usage: node app.js PORT_NUMBER`);
+    if (process.argv.length != 2) {
+        console.log(`Usage: node app.js`);
         process.exit(1);
     }
 
     // Connection variables
-    const portNumber = process.argv[2];
+    const portNumber = 4000;
     const uri = process.env.MONGO_CONNECTION_STRING;
     const databaseAndCollection = {db: process.env.MONGO_DB_NAME , collection: process.env.MONGO_COLLECTION};
     const client = new MongoClient(uri, {serverApi: ServerApiVersion.v1});
