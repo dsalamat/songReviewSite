@@ -5,9 +5,7 @@ By Daniel Salamatovs (dsalamat) and Samuel Schreier (sschreie)
 
 This travel itinerary website utilizes Node.js, Express.js, MongoDB, RapidAPI, and Axios to provide a seamless experience. Some of the functionality includes adding and removing a destination from your itinerary, searching for a city and its details that can then be added to the itinerary, and clearing the itinerary. 
 
-The itinerary is stored in MongoDB so that it can be accessed even after the itinerary app has been restarted. City details are retrieved from the GeoDB Cities API on RapidAPI.
-
-https://rapidapi.com/wirefreethought/api/geodb-cities/details 
+The itinerary is stored in MongoDB so that it can be accessed even after the itinerary app has been restarted. City details are retrieved from the [GeoDB Cities API](https://rapidapi.com/wirefreethought/api/geodb-cities/details) on RapidAPI.
 
 ## Usage
 
