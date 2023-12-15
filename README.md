@@ -11,7 +11,9 @@ https://rapidapi.com/wirefreethought/api/geodb-cities/details
 
 ## Usage
 
-To use this app you need to have Node.js and Node Package Manager (npm) installed. If you have those then:
+This app is currently live at [this link](https://travel-itinerary.onrender.com). To see a demonstation of using the app, watch the [Usage Video](https://youtu.be/4Mj7_Sa9Tv4).
+
+To use this app locally, you need to have Node.js and Node Package Manager (npm) installed. If you have those then:
 
 1. **Clone** the repository
 2. Run `npm install` in the directory to download all necessary dependencies
@@ -20,4 +22,12 @@ To use this app you need to have Node.js and Node Package Manager (npm) installe
 
 To stop the app, run `stop` in the command line terminal or use *CTRL+C*
 
-https://youtu.be/4Mj7_Sa9Tv4 
+## Dependancies
+
+* Axios
+* EJS
+* Express
+* DotEnv
+* GeoDB Api from RapidAPI
+* MongoDB
+
