@@ -18,16 +18,13 @@ app.use(express.static(__dirname + "/static"));
 async function main() {
 
     // Check for correct number of arguments
-    if (process.argv.length != 3) {
-        console.log(`Usage: node app.js PORT_NUMBER`);
-        process.exit(1);
-    } else if (Number.isNaN(Number(process.argv[2]))) {
-        console.log(`Usage: node app.js PORT_NUMBER`);
+    if (process.argv.length != 2) {
+        console.log(`Usage: node app.js`);
         process.exit(1);
     }
 
     // Connection variables
-    const portNumber = process.argv[2];
+    const portNumber = 4000;
     const uri = process.env.MONGO_CONNECTION_STRING;
     const databaseAndCollection = {db: process.env.MONGO_DB_NAME , collection: process.env.MONGO_COLLECTION};
     const client = new MongoClient(uri, {serverApi: ServerApiVersion.v1});
@@ -63,7 +60,7 @@ async function main() {
                 region: request.body.region,
                 date: request.body.date,
                 notes: request.body.notes,
-                dateAndTime: date.toLocaleString()
+                dateAndTime: date.toLocaleString("en-US", {timeZone: "America/New_York"}) + " - EST (New York)"
             };
             (async function() {await insertDestination(client, databaseAndCollection, variables)})();
             response.render("submission", variables);
@@ -97,7 +94,7 @@ async function main() {
                 const variables = {
                     city: request.body.city,
                     result: output,
-                    dateAndTime: date.toLocaleString()
+                    dateAndTime: date.toLocaleString("en-US", {timeZone: "America/New_York"}) + " - EST (New York)"
                 };
                 response.render("details", variables);
             });
@@ -120,7 +117,7 @@ async function main() {
                 const date = new Date();
                 const variables = {
                     itinerary: output,
-                    dateAndTime: date.toLocaleString()
+                    dateAndTime: date.toLocaleString("en-US", {timeZone: "America/New_York"}) + " - EST (New York)"
                 };
                 response.render("itinerary", variables);
             });
@@ -144,7 +141,7 @@ async function main() {
                     region: request.body.region,
                     date: request.body.date,
                     numRemoved: numRemoved,
-                    dateAndTime: date
+                    dateAndTime: date.toLocaleString("en-US", {timeZone: "America/New_York"}) + " - EST (New York)"
                 };
                 if (numRemoved > 0) {
                     response.render("removed", variables);
@@ -162,7 +159,7 @@ async function main() {
                 const date = new Date();
                 const variables = {
                     numRemoved: numRemoved,
-                    dateAndTime: date
+                    dateAndTime: date.toLocaleString("en-US", {timeZone: "America/New_York"}) + " - EST (New York)"
                 };
                 response.render("cleared", variables);
             });
